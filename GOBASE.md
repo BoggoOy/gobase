@@ -68,10 +68,12 @@ Supabase is licensed under the [Apache License 2.0](LICENSE). Keep all existing 
 
 ## Modified upstream files
 
-| File                                                                  | Change                                                             |
-| --------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| `apps/studio/pages/project/[ref]/index.tsx`                           | Self-hosted projects render `GoBaseHome` instead of `ProjectHome`. |
-| `apps/studio/components/layouts/Navigation/LayoutHeader/HomeIcon.tsx` | Header shows the Boggo logo (`public/img/gobase/boggo-logo.svg`).  |
+| File                                                                  | Change                                                                                                |
+| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `apps/studio/pages/project/[ref]/index.tsx`                           | Self-hosted projects render `GoBaseHome` instead of `ProjectHome`.                                    |
+| `apps/studio/components/layouts/Navigation/LayoutHeader/HomeIcon.tsx` | Header shows the Boggo logo (`public/img/gobase/boggo-logo.svg`).                                     |
+| `apps/studio/hooks/custom-content/custom-content.json`                | `app:title` is `GoBase` (browser tab titles). JSON has no comments, so this table is the only marker. |
+| `apps/studio/pages/_app.tsx`                                          | Favicon route `/img/gobase/favicon` and application name `GoBase`.                                    |
 
 The TanStack route `apps/studio/routes/project/$ref/index.tsx` re-exports this page, so it needs no change.
 
@@ -107,7 +109,8 @@ may be empty. The page shows `–` for missing values instead of failing.
 At the current base, the image is built with Next.js (`STUDIO_FRAMEWORK=next`). The GoBase API route
 exists only as a Next API route (`apps/studio/pages/api/gobase/overview.ts`). When the base moves to an
 upstream version without the Next runtime, add a TanStack wrapper in `apps/studio/routes/api/gobase/`
-(see `routes/api/get-utc-time.ts` for the pattern).
+(see `routes/api/get-utc-time.ts` for the pattern). Also mirror the favicon route and application name from `pages/_app.tsx` into
+`routes/__root.tsx`.
 
 ## Build
 

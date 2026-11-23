@@ -181,7 +181,8 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
     process.env.NODE_ENV === 'development' ||
     process.env.NEXT_PUBLIC_ENVIRONMENT === 'local' ||
     isCLI
-  let faviconRoute = '/favicon'
+  // Modified by Boggo Oy for GoBase: GoBase favicons (staging/local variants are unchanged).
+  let faviconRoute = '/img/gobase/favicon'
   if (isNonProdEnv) faviconRoute = '/favicon/staging'
   if (isLocalEnv) faviconRoute = '/favicon/local'
 
@@ -226,7 +227,7 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
                       </Head>
                       <MetaFaviconsPagesRouter
                         includeManifest
-                        applicationName="Supabase Studio"
+                        applicationName="GoBase"
                         route={faviconRoute}
                       />
                       <TooltipProvider>
