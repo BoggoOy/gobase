@@ -6,12 +6,18 @@ import type { GoBaseService } from '@/data/gobase/gobase-overview.schema'
 
 type LogsBarChartDatum = ComponentProps<typeof LogsBarChart>['data'][number]
 
-/** Formats a 0–1 ratio as a percentage, e.g. 0.9934 → "99.3%". */
+/**
+ * Formats a 0–1 ratio as a percentage, e.g. 0.9934 → "99.34%". Values below 1 are rounded down so
+ * that a ratio with any failures never shows as "100%".
+ */
 export function formatRatio(ratio: number, locale: string) {
+  const fractionDigits = ratio >= 0.99 && ratio < 1 ? 2 : 1
+  const factor = 10 ** (fractionDigits + 2)
+  const value = ratio < 1 ? Math.floor(ratio * factor) / factor : ratio
   return new Intl.NumberFormat(locale, {
     style: 'percent',
-    maximumFractionDigits: ratio > 0.999 && ratio < 1 ? 2 : 1,
-  }).format(ratio)
+    maximumFractionDigits: fractionDigits,
+  }).format(value)
 }
 
 /** Usage as a 0–1 ratio, clamped so a misreported value never breaks a progress bar. */

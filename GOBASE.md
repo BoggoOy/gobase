@@ -63,12 +63,15 @@ Supabase is licensed under the [Apache License 2.0](LICENSE). Keep all existing 
 - When modifying an upstream file, add a short comment near the top: `// Modified by Boggo Oy for GoBase.`
 - New GoBase files start with: `// Copyright Boggo Oy. Licensed under the Apache License 2.0.`
 - List modified upstream files in the "Modified upstream files" section below.
+- The Boggo name and logo are trademarks of Boggo Oy and are not licensed under the Apache License 2.0
+  (see section 6 of the license).
 
 ## Modified upstream files
 
-| File                                        | Change                                                             |
-| ------------------------------------------- | ------------------------------------------------------------------ |
-| `apps/studio/pages/project/[ref]/index.tsx` | Self-hosted projects render `GoBaseHome` instead of `ProjectHome`. |
+| File                                                                  | Change                                                             |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| `apps/studio/pages/project/[ref]/index.tsx`                           | Self-hosted projects render `GoBaseHome` instead of `ProjectHome`. |
+| `apps/studio/components/layouts/Navigation/LayoutHeader/HomeIcon.tsx` | Header shows the Boggo logo (`public/img/gobase/boggo-logo.svg`).  |
 
 The TanStack route `apps/studio/routes/project/$ref/index.tsx` re-exports this page, so it needs no change.
 
@@ -76,11 +79,11 @@ The TanStack route `apps/studio/routes/project/$ref/index.tsx` re-exports this p
 
 The Studio server reads these environment variables at runtime. They are never exposed to the browser.
 
-| Variable            | Example                          | Purpose                                         |
-| ------------------- | -------------------------------- | ----------------------------------------------- |
-| `GOBASE_API_URL`    | `https://gobase-api.example.com` | Base URL of the GoBase API (`http` or `https`). |
-| `GOBASE_API_TOKEN`  | (secret)                         | Bearer token for the GoBase API.                |
-| `GOBASE_PROJECT_ID` | `project-id`                     | Project whose data this Studio instance shows.  |
+| Variable            | Example                                 | Purpose                                                                                               |
+| ------------------- | --------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `GOBASE_API_URL`    | `https://portal.example.com/api/gobase` | Base URL of the GoBase API proxy in the GoBase portal (`http` or `https`, may include a path prefix). |
+| `GOBASE_API_TOKEN`  | (secret)                                | Bearer token for the GoBase API.                                                                      |
+| `GOBASE_PROJECT_ID` | `project-id`                            | Project whose data this Studio instance shows.                                                        |
 
 Build-time, optional: `NEXT_PUBLIC_GOBASE_LOCALE` selects the UI language of the GoBase home page
 (default `en`). Strings live in `apps/studio/components/interfaces/GoBase/GoBase.messages.ts`.
@@ -95,6 +98,10 @@ The home page calls the Studio route `GET /api/gobase/overview?interval=60m|24h|
 `apps/studio/data/gobase/gobase-overview.schema.ts`, which is the source of truth for the contract.
 Invalid responses are rejected with a 502 and only the names of the invalid fields are logged.
 
+Fields the GoBase collector may be unable to provide for a while (`infrastructure.postgresVersion`,
+`infrastructure.connections`, `requests.total`, `requests.successRate`) are nullable, and `services[].series`
+may be empty. The page shows `–` for missing values instead of failing.
+
 ## TanStack Start migration
 
 At the current base, the image is built with Next.js (`STUDIO_FRAMEWORK=next`). The GoBase API route
@@ -105,8 +112,9 @@ upstream version without the Next runtime, add a TanStack wrapper in `apps/studi
 ## Build
 
 GitHub Actions builds the image on every push to `gobase` that touches Studio
-(`.github/workflows/gobase-studio-image.yml`) and pushes it to the private registry
-`ghcr.io/boggooy/gobase-studio` with the tag `sha-<commit>`. The run summary shows the digest.
+(`.github/workflows/gobase-studio-image.yml`) and pushes it to the public registry
+`ghcr.io/boggooy/gobase-studio` with the tag `sha-<commit>`. The image is public because the code is public
+and the image contains no secrets; never pass secrets as build arguments or bake them into the image. The run summary shows the digest.
 Deploy by digest (`ghcr.io/boggooy/gobase-studio@sha256:…`), never by a moving tag. The workflow uses
 only `GITHUB_TOKEN` to log in to the registry; it has no other secrets.
 

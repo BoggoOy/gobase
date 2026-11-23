@@ -46,7 +46,8 @@ export type GoBaseMessages = {
   errors: string
   serviceDisabled: string
   noData: string
-  notAvailable: string
+  /** Shown in place of a value that is temporarily unavailable. */
+  missingValue: string
   loadFailed: string
 }
 
@@ -105,7 +106,7 @@ const en: GoBaseMessages = {
   errors: 'Errors',
   serviceDisabled: 'Not enabled',
   noData: 'No data for this period',
-  notAvailable: 'Not available',
+  missingValue: '–',
   loadFailed: 'Failed to load project overview',
 }
 

@@ -6,13 +6,16 @@ import { countryName, formatRatio, toLogsBarChartData, usageRatio } from './GoBa
 
 describe('formatRatio', () => {
   test('formats ratios as percentages', () => {
-    expect(formatRatio(0.9934, 'en')).toBe('99.3%')
+    expect(formatRatio(0.9934, 'en')).toBe('99.34%')
+    expect(formatRatio(0.75, 'en')).toBe('75%')
     expect(formatRatio(1, 'en')).toBe('100%')
     expect(formatRatio(0, 'en')).toBe('0%')
   })
 
-  test('keeps two decimals just below 100% so it does not round up to 100%', () => {
-    expect(formatRatio(0.99987, 'en')).toBe('99.99%')
+  test('never rounds a ratio below 1 up to 100%', () => {
+    expect(formatRatio(0.99987, 'en')).toBe('99.98%')
+    expect(formatRatio(0.999999, 'en')).toBe('99.99%')
+    expect(formatRatio(0.98765, 'en')).toBe('98.7%')
   })
 })
 

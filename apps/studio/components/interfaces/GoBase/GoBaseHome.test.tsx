@@ -27,8 +27,29 @@ describe('GoBaseHome', () => {
     expect(screen.getByText('Finland')).toBeInTheDocument()
     expect(screen.getByText('14 / 100')).toBeInTheDocument()
     expect(screen.getByText('12,345')).toBeInTheDocument()
-    expect(screen.getByText('99.3%')).toBeInTheDocument()
+    expect(screen.getByText('99.34%')).toBeInTheDocument()
     expect(screen.getByText('Not enabled')).toBeInTheDocument()
+  })
+
+  test('shows a dash for values the collector could not provide', async () => {
+    const overview = buildGoBaseOverview()
+    mswServer.use(
+      http.get(OVERVIEW_PATH, () =>
+        HttpResponse.json<GoBaseOverview>({
+          ...overview,
+          infrastructure: { ...overview.infrastructure, postgresVersion: null, connections: null },
+          requests: { total: null, successRate: null },
+          services: overview.services.map((service) => ({ ...service, series: [] })),
+        })
+      )
+    )
+
+    customRender(<GoBaseHome />)
+
+    expect(await screen.findByRole('heading', { name: 'Example project' })).toBeInTheDocument()
+    // Database, connections, total requests and success rate.
+    expect(screen.getAllByText('–')).toHaveLength(4)
+    expect(screen.getAllByText('No data for this period').length).toBeGreaterThan(0)
   })
 
   test('requests a new interval when the period changes', async () => {

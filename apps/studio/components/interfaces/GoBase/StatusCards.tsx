@@ -1,7 +1,7 @@
 // Copyright Boggo Oy. Licensed under the Apache License 2.0.
 import dayjs from 'dayjs'
 import type { ReactNode } from 'react'
-import { Badge, Card, CardContent } from 'ui'
+import { Badge, Card, CardContent, cn } from 'ui'
 
 import type { GoBaseMessages } from './GoBase.messages'
 import { InlineLink } from '@/components/ui/InlineLink'
@@ -73,7 +73,7 @@ export const StatusCards = ({ overview, messages }: StatusCardsProps) => {
         )}
       </StatusCard>
 
-      <StatusCard label={messages.lastBackup}>
+      <StatusCard label={messages.lastBackup} className="sm:col-span-2">
         {lastBackup === null && (
           <span className="text-foreground-lighter">{messages.noBackups}</span>
         )}
@@ -90,8 +90,10 @@ export const StatusCards = ({ overview, messages }: StatusCardsProps) => {
   )
 }
 
-const StatusCard = ({ label, children }: { label: string; children: ReactNode }) => (
-  <Card className="mb-0 md:mb-0">
+type StatusCardProps = { label: string; children: ReactNode; className?: string }
+
+const StatusCard = ({ label, children, className }: StatusCardProps) => (
+  <Card className={cn('mb-0 md:mb-0', className)}>
     <CardContent className="flex flex-col gap-2">
       <span className="font-mono text-xs uppercase text-foreground-light">{label}</span>
       <div className="flex min-h-6 min-w-0 items-center text-foreground">{children}</div>

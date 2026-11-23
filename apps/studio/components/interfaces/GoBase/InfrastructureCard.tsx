@@ -22,7 +22,8 @@ export const InfrastructureCard = ({
   const cpuRatio = cpu.usagePercent === null ? null : cpu.usagePercent / 100
   const memoryRatio = usageRatio(memory.usedBytes, memory.totalBytes)
   const diskRatio = usageRatio(disk.usedBytes, disk.totalBytes)
-  const connectionsRatio = usageRatio(connections.active, connections.max)
+  const connectionsRatio =
+    connections === null ? null : usageRatio(connections.active, connections.max)
 
   return (
     <Card className="mb-0 h-full md:mb-0">
@@ -30,7 +31,14 @@ export const InfrastructureCard = ({
         <CardTitle>{messages.infrastructure}</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col divide-y p-0">
-        <InfraRow label={messages.database} value={`Postgres ${infrastructure.postgresVersion}`} />
+        <InfraRow
+          label={messages.database}
+          value={
+            infrastructure.postgresVersion === null
+              ? messages.missingValue
+              : `Postgres ${infrastructure.postgresVersion}`
+          }
+        />
         <InfraRow
           label={messages.location}
           value={countryName(infrastructure.countryCode, locale)}
@@ -57,7 +65,11 @@ export const InfrastructureCard = ({
         />
         <InfraRow
           label={messages.connections}
-          value={`${connections.active} / ${connections.max}`}
+          value={
+            connections === null
+              ? messages.missingValue
+              : `${connections.active} / ${connections.max}`
+          }
           ratio={connectionsRatio}
         />
       </CardContent>

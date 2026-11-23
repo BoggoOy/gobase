@@ -36,13 +36,17 @@ export const RequestsSummary = ({
       <div className="flex flex-wrap items-end gap-x-8 gap-y-2">
         <Metric
           label={messages.totalRequests}
-          value={new Intl.NumberFormat(locale).format(requests.total)}
+          value={
+            requests.total === null
+              ? messages.missingValue
+              : new Intl.NumberFormat(locale).format(requests.total)
+          }
         />
         <Metric
           label={messages.successRate}
           value={
             requests.successRate === null
-              ? messages.notAvailable
+              ? messages.missingValue
               : formatRatio(requests.successRate, locale)
           }
         />

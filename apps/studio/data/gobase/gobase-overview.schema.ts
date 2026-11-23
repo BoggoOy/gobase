@@ -72,7 +72,8 @@ export const goBaseOverviewSchema = z.object({
     })
     .nullable(),
   infrastructure: z.object({
-    postgresVersion: z.string().min(1),
+    // Nullable fields may be null while the GoBase collector is briefly unavailable.
+    postgresVersion: z.string().min(1).nullable(),
     countryCode: z.string().length(2),
     cpu: z.object({
       cores: z.number().int().positive(),
@@ -80,13 +81,15 @@ export const goBaseOverviewSchema = z.object({
     }),
     memory: usageSchema,
     disk: usageSchema,
-    connections: z.object({
-      active: count,
-      max: count.positive(),
-    }),
+    connections: z
+      .object({
+        active: count,
+        max: count.positive(),
+      })
+      .nullable(),
   }),
   requests: z.object({
-    total: count,
+    total: count.nullable(),
     successRate: z.number().min(0).max(1).nullable(),
   }),
   services: z.array(serviceSchema),
