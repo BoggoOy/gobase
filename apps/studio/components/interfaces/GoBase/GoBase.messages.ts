@@ -10,8 +10,6 @@ import type {
 } from '@/data/gobase/gobase-overview.schema'
 
 export type GoBaseMessages = {
-  productName: string
-  productTagline: string
   projectUrl: string
   copy: string
   copied: string
@@ -52,8 +50,6 @@ export type GoBaseMessages = {
 }
 
 const en: GoBaseMessages = {
-  productName: 'GoBase',
-  productTagline: 'Supabase-compatible',
   projectUrl: 'Project URL',
   copy: 'Copy',
   copied: 'Copied',
