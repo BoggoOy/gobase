@@ -13,7 +13,7 @@ interface LocalSetupGuideProps {
 
 const VARIANT_TITLES: Record<LocalSetupGuideVariant, string> = {
   cli: 'Local development & CLI',
-  selfHosted: 'Self-Hosted Supabase',
+  selfHosted: 'Self-Hosted GoBase',
 }
 
 /**
@@ -35,3 +35,4 @@ export const LocalSetupGuide = ({ variant, body, docsHref }: LocalSetupGuideProp
     </Card>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

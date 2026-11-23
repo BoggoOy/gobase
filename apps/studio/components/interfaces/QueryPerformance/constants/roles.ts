@@ -69,7 +69,7 @@ export const ROLE_INFO: Record<KnownRole, RoleInfo> = {
     displayName: 'Dashboard User',
   },
   supabase_admin: {
-    displayName: 'Supabase Admin',
+    displayName: 'GoBase Admin',
   },
 }
 
@@ -81,3 +81,4 @@ export type RoleGroup = {
   name: string
   options: string[]
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

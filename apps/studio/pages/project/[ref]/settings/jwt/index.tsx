@@ -28,7 +28,7 @@ const JWTSigningKeysPage: NextPageWithLayout = () => {
             variant="cli"
             body={
               <p>
-                The asymmetric key pair used to sign user session JWTs is configured by the Supabase
+                The asymmetric key pair used to sign user session JWTs is configured by the GoBase
                 CLI.
               </p>
             }
@@ -73,3 +73,4 @@ JWTSigningKeysPage.getLayout = (page) => (
 )
 
 export default JWTSigningKeysPage
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

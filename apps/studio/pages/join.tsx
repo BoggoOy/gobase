@@ -4,7 +4,7 @@ import { OrganizationInvite } from '@/components/interfaces/OrganizationInvite/O
 import { buildStudioPageTitle } from '@/lib/page-title'
 import type { NextPageWithLayout } from '@/types'
 
-const PAGE_TITLE = buildStudioPageTitle({ section: 'Join Organization', brand: 'Supabase' })
+const PAGE_TITLE = buildStudioPageTitle({ section: 'Join Organization', brand: 'GoBase' })
 
 const JoinOrganizationPage: NextPageWithLayout = () => {
   return (
@@ -18,3 +18,4 @@ const JoinOrganizationPage: NextPageWithLayout = () => {
 }
 
 export default JoinOrganizationPage
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

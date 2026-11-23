@@ -226,7 +226,7 @@ export const OAuthServerSettingsForm = () => {
                     render={({ field }) => (
                       <FormItemLayout
                         layout="flex-row-reverse"
-                        label="Enable the Supabase OAuth Server"
+                        label="Enable the GoBase OAuth Server"
                         description="Enable OAuth server functionality for your project to create and manage OAuth applications."
                       >
                         <FormControl>
@@ -437,3 +437,4 @@ export const OAuthServerSettingsForm = () => {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

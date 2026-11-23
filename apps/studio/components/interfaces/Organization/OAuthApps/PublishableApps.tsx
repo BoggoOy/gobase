@@ -95,7 +95,7 @@ export const PublishableApps = () => {
         <PageSectionSummary>
           <PageSectionTitle>Publishable apps</PageSectionTitle>
           <PageSectionDescription>
-            Build integrations that extend Supabase's functionality
+            Build integrations that extend GoBase's functionality
           </PageSectionDescription>
         </PageSectionSummary>
         <PageSectionAside>
@@ -275,3 +275,4 @@ export const PublishableApps = () => {
     </PageSection>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

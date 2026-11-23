@@ -21,27 +21,27 @@ export const OptInToOpenAIToggle = () => {
       </DialogTrigger>
       <DialogContent className="sm:max-w-2xl">
         <DialogHeader padding="small" className="border-b">
-          <DialogTitle>Data Privacy and Supabase AI</DialogTitle>
+          <DialogTitle>Data Privacy and GoBase AI</DialogTitle>
         </DialogHeader>
         <DialogSection
           padding="small"
           className="flex flex-col gap-y-4 text-sm text-foreground-light"
         >
           <p>
-            Supabase AI utilizes third-party AI providers designed with a strong focus on data
-            privacy and security.
+            GoBase AI utilizes third-party AI providers designed with a strong focus on data privacy
+            and security.
           </p>
 
           <p>
             By default, only schema data is shared with third-party AI providers. This is not
-            retained by them nor used as training data. With your permission, Supabase may also
-            share customer-generated prompts, database data, and project logs with these providers.
-            This information is used solely to generate responses to your queries and is not
-            retained by the providers or used to train their models.
+            retained by them nor used as training data. With your permission, GoBase may also share
+            customer-generated prompts, database data, and project logs with these providers. This
+            information is used solely to generate responses to your queries and is not retained by
+            the providers or used to train their models.
           </p>
 
           <p>
-            For organizations with HIPAA compliance enabled in their Supabase configuration, any
+            For organizations with HIPAA compliance enabled in their GoBase configuration, any
             consented information will only be shared with third-party AI providers with whom
             Supabase has established a Business Associate Agreement (BAA). Don't input personal data
             unless you've{' '}
@@ -62,3 +62,4 @@ export const OptInToOpenAIToggle = () => {
     </Dialog>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

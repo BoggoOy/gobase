@@ -58,9 +58,7 @@ export function useCheckLatestDeploy() {
         commit.commitTime === 'unknown'
           ? 'unknown time'
           : dayjs(commit.commitTime).format('YYYY-MM-DD HH:mm:ss Z')
-      console.log(
-        `Supabase Studio is running commit ${commit.commitSha} deployed at ${commitTime}.`
-      )
+      console.log(`GoBase Studio is running commit ${commit.commitSha} deployed at ${commitTime}.`)
       commitLoggedRef.current = true
     }
   }, [commit])
@@ -100,3 +98,4 @@ export function useCheckLatestDeploy() {
     setIsToastShown(true)
   }, [commit, isToastShown, currentCommitTime])
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

@@ -25,7 +25,7 @@ const OrganizationsPage: NextPageWithLayout = () => {
   const [search, setSearch] = useState('')
   const pageTitle = buildStudioPageTitle({
     section: 'Organizations',
-    brand: appTitle || 'Supabase',
+    brand: appTitle || 'GoBase',
   })
 
   const {
@@ -48,7 +48,7 @@ const OrganizationsPage: NextPageWithLayout = () => {
     <>
       <Head>
         <title>{pageTitle}</title>
-        <meta name="description" content="Supabase Studio" />
+        <meta name="description" content="GoBase Studio" />
       </Head>
       <ScaffoldContainer>
         <ScaffoldSection isFullWidth className="flex flex-col gap-y-4">
@@ -108,3 +108,4 @@ OrganizationsPage.getLayout = (page) => (
 )
 
 export default withAuth(OrganizationsPage)
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

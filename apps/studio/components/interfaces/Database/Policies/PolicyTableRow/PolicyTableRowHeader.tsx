@@ -130,13 +130,13 @@ export const PolicyTableRowHeader = ({
                   text:
                     !canToggleRLS || !canCreatePolicies
                       ? 'You need additional permissions to create RLS policies'
-                      : 'Create with Supabase Assistant',
+                      : 'Create with GoBase Assistant',
                 },
               }}
               aria-label={
                 !canToggleRLS || !canCreatePolicies
                   ? 'You need additional permissions to create RLS policies'
-                  : 'Create with Supabase Assistant'
+                  : 'Create with GoBase Assistant'
               }
             >
               <AiIconAnimation size={16} />
@@ -147,3 +147,4 @@ export const PolicyTableRowHeader = ({
     </div>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

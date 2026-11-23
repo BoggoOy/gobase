@@ -19,7 +19,7 @@ export const NEW_SQL_SNIPPET_SKELETON: UserContent<SqlSnippets.Content> = {
 }
 
 export const sqlAiDisclaimerComment = `
--- Supabase AI is experimental and may produce incorrect answers
+-- GoBase AI is experimental and may produce incorrect answers
 -- Always verify the output before executing
 `.trim()
 
@@ -105,3 +105,4 @@ export const ROWS_PER_PAGE_OPTIONS = [
   { value: 500, label: '500 rows' },
   { value: 1000, label: '1,000 rows' },
 ]
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

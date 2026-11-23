@@ -23,7 +23,7 @@ export const JWT_SECRET_UPDATE_ERROR_MESSAGES = {
   [JwtSecretUpdateError.DatabaseAdminAPIConfigurationUpdateFailed]:
     'failed to update configuration for database admin API',
   [JwtSecretUpdateError.PostgreSQLRestartFailed]: 'failed to restart PostgreSQL service',
-  [JwtSecretUpdateError.SupabaseAPIKeyUpdateFailed]: 'failed to update Supabase API key',
+  [JwtSecretUpdateError.SupabaseAPIKeyUpdateFailed]: 'failed to update GoBase API key',
   [JwtSecretUpdateError.APIGatewayUpdateFailed]: 'failed to update API Gateway',
 }
 
@@ -37,3 +37,4 @@ export const JWT_SECRET_UPDATE_PROGRESS_MESSAGES = {
     'updated configuration for database admin API',
   [JwtSecretUpdateProgress.UpdatedAPIGatewayConfiguration]: 'updated configuration for API Gateway',
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

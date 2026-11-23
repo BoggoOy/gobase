@@ -82,7 +82,7 @@ export function getOrganizationInviteContent({
   if (status === 'ready') {
     return {
       title: `Join ${data?.organization_name ?? 'an organization'}`,
-      description: 'You have been invited to join this Supabase organization',
+      description: 'You have been invited to join this GoBase organization',
     }
   }
 
@@ -101,3 +101,4 @@ export function getOrganizationInviteContent({
 
   return {}
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

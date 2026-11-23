@@ -103,7 +103,7 @@ const OrganizationLayoutContent = ({
     section: title,
     surface: isSettingsSurface ? 'Organization Settings' : undefined,
     org: selectedOrganization?.name,
-    brand: appTitle || 'Supabase',
+    brand: appTitle || 'GoBase',
   })
 
   const vercelQuery = useVercelRedirectQuery(
@@ -136,7 +136,7 @@ const OrganizationLayoutContent = ({
       {pageTitle && (
         <Head>
           <title>{pageTitle}</title>
-          <meta name="description" content="Supabase Studio" />
+          <meta name="description" content="GoBase Studio" />
         </Head>
       )}
       {selectedOrganization && bannerConfig && !isBannerDismissed && (
@@ -179,3 +179,4 @@ const OrganizationLayout = ({ children, title }: PropsWithChildren<OrganizationL
 }
 
 export default withAuth(OrganizationLayout)
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

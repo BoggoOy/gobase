@@ -153,8 +153,9 @@ export function SupportFormStatusButton() {
         </Button>
       </TooltipTrigger>
       <TooltipContent side="bottom" align="center">
-        Check the Supabase status page
+        Check the GoBase status page
       </TooltipContent>
     </Tooltip>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

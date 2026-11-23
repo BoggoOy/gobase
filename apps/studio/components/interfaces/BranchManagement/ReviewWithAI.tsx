@@ -116,7 +116,7 @@ export const ReviewWithAI = ({
       tooltip={{
         content: {
           side: 'bottom',
-          text: 'Ask Supabase Assistant to review the merge request',
+          text: 'Ask GoBase Assistant to review the merge request',
         },
       }}
     >
@@ -125,3 +125,4 @@ export const ReviewWithAI = ({
     </ButtonTooltip>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

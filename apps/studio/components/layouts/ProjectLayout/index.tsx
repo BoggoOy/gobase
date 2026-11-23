@@ -192,7 +192,7 @@ export const ProjectLayout = forwardRef<HTMLDivElement, PropsWithChildren<Projec
     const combinedRef = mergeRefs(ref, setMainScrollContainer)
 
     const { appTitle } = useCustomContent(['app:title'])
-    const brandTitle = appTitle || 'Supabase'
+    const brandTitle = appTitle || 'GoBase'
 
     const isMobile = useIsMobile()
 
@@ -300,7 +300,7 @@ export const ProjectLayout = forwardRef<HTMLDivElement, PropsWithChildren<Projec
       <>
         <Head>
           <title>{pageTitle}</title>
-          <meta name="description" content="Supabase Studio" />
+          <meta name="description" content="GoBase Studio" />
         </Head>
         <div className="flex flex-row h-full w-full">
           <ResizablePanelGroup orientation="horizontal">
@@ -539,3 +539,4 @@ const ContentWrapper = ({ children }: ContentWrapperProps) => {
 
   return <Fragment key={selectedProject?.ref}>{children}</Fragment>
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

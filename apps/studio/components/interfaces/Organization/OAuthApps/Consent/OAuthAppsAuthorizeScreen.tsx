@@ -174,7 +174,7 @@ export const OAuthAppsAuthorizeScreen = ({
       <InterstitialLayout
         logo={<DestinationLogo name={request.name} />}
         title={`Authorize ${request.name}`}
-        description="This application wants to access your Supabase Account"
+        description="This application wants to access your GoBase Account"
       >
         <div className="flex flex-col gap-6 px-6 pb-6">
           <AlertError
@@ -191,7 +191,7 @@ export const OAuthAppsAuthorizeScreen = ({
       <InterstitialLayout
         logo={<DestinationLogo name={request.name} />}
         title={`Authorize ${request.name}`}
-        description="This application wants to access your Supabase Account"
+        description="This application wants to access your GoBase Account"
       >
         <div className="flex flex-col gap-6 px-6 pb-6">
           <AlertError
@@ -262,7 +262,7 @@ export const OAuthAppsAuthorizeScreen = ({
     <InterstitialLayout
       logo={<LogoPair left={<DestinationLogo name={request.name} />} right={<SupabaseLogo />} />}
       title={`Authorize ${request.name}`}
-      description="This application wants to access your Supabase Account"
+      description="This application wants to access your GoBase Account"
     >
       <div className="flex flex-col gap-6 px-6 pb-6">
         {preflightQuery.data?.status === 'error' && (
@@ -382,3 +382,4 @@ export const OAuthAppsAuthorizeScreen = ({
     </InterstitialLayout>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

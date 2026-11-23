@@ -43,7 +43,7 @@ export function buildSupportAssistantPrompt(request: SubmittedSupportRequest) {
     '<support>',
     supportField(
       'assistant_context',
-      'A support request has already been submitted and a human member of the Supabase Support team is already looking at it. Your role is to help the user troubleshoot in the interim while they wait for the human support response. Do not ask them to submit another support ticket for this same issue.'
+      'A support request has already been submitted and a human member of the GoBase Support team is already looking at it. Your role is to help the user troubleshoot in the interim while they wait for the human support response. Do not ask them to submit another support ticket for this same issue.'
     ),
     supportField('category', request.category),
     supportField('severity', request.severity),
@@ -139,3 +139,4 @@ export function parseSupportAssistantPrompt(text: string): ParsedSupportAssistan
 
   return Object.keys(parsed).length > 0 ? parsed : null
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

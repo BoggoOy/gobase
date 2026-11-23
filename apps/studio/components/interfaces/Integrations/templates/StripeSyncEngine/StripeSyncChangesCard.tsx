@@ -39,13 +39,13 @@ export const StripeSyncChangesCard = ({
   const isInstalledWithUpgrade = installed && isUpgrade
 
   const title = isInstalledWithUpgrade
-    ? 'This integration will upgrade your Supabase project:'
+    ? 'This integration will upgrade your GoBase project:'
     : uninstallDone || installError
-      ? 'This integration will modify your Supabase project:'
+      ? 'This integration will modify your GoBase project:'
       : isInProgress
-        ? 'This integration is modifying your Supabase project:'
+        ? 'This integration is modifying your GoBase project:'
         : installDone || installed || uninstallError
-          ? 'This integration has modified your Supabase project:'
+          ? 'This integration has modified your GoBase project:'
           : ''
 
   const dbLine = isInstalledWithUpgrade
@@ -91,17 +91,17 @@ export const StripeSyncChangesCard = ({
             : ''
 
   const scheduleLine = isInstalledWithUpgrade
-    ? 'Upgrades automatic Stripe data syncs using Supabase Queues'
+    ? 'Upgrades automatic Stripe data syncs using GoBase Queues'
     : uninstallDone || installError
-      ? 'Schedules automatic Stripe data syncs using Supabase Queues'
+      ? 'Schedules automatic Stripe data syncs using GoBase Queues'
       : installInProgress
         ? isUpgrade
-          ? 'Upgrading automatic Stripe data syncs using Supabase Queues'
-          : 'Scheduling automatic Stripe data syncs using Supabase Queues'
+          ? 'Upgrading automatic Stripe data syncs using GoBase Queues'
+          : 'Scheduling automatic Stripe data syncs using GoBase Queues'
         : installDone || installed || uninstallError
-          ? 'Scheduled automatic Stripe data syncs using Supabase Queues'
+          ? 'Scheduled automatic Stripe data syncs using GoBase Queues'
           : uninstallInProgress
-            ? 'Unscheduling automatic Stripe data syncs using Supabase Queues'
+            ? 'Unscheduling automatic Stripe data syncs using GoBase Queues'
             : ''
 
   return (
@@ -157,3 +157,4 @@ export const StripeSyncChangesCard = ({
     </div>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

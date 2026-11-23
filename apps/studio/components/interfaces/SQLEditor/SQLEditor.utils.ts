@@ -201,7 +201,7 @@ export function appendEnableRLSStatements(sql: string, tables: CreateTableWithou
   const endsWithLineComment = /--[^\r\n]*$/.test(trimmed)
   const separator = trimmed.endsWith(';') ? '\n\n' : endsWithLineComment ? '\n;\n\n' : ';\n\n'
 
-  return `${trimmed}${separator}-- Added by Supabase: enable Row Level Security on newly created tables\n${additions}\n`
+  return `${trimmed}${separator}-- Added by GoBase: enable Row Level Security on newly created tables\n${additions}\n`
 }
 
 export function checkAlterDatabaseConnection(sql: string): boolean {
@@ -492,7 +492,7 @@ export function buildCompletionRequestBody({
  * models, so it has to stand on its own — otherwise a logs error gets Postgres advice.
  */
 const CLICKHOUSE_LOGS_DEBUG_HINT =
-  'This query runs against the Supabase logs table on a ClickHouse-backed engine, not Postgres.'
+  'This query runs against the GoBase logs table on a ClickHouse-backed engine, not Postgres.'
 
 /** The shared ask + error + dialect preamble behind both debug entry points. */
 function buildDebugRequestText(errorMessage: string, source: SqlSnippetSource): string {
@@ -616,3 +616,4 @@ export function resolveDiffKeyAction(
       return { type: 'none' }
   }
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

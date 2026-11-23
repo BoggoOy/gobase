@@ -195,7 +195,7 @@ const RenameQueryForm = ({ snippet, onCancel, onComplete }: RenameQueryFormProps
                 <div className="scale-75">
                   <AiIconAnimation loading={isTitleGenerationLoading} />
                 </div>
-                <span>Rename with Supabase AI</span>
+                <span>Rename with GoBase AI</span>
               </div>
             </ButtonTooltip>
           </div>
@@ -258,3 +258,4 @@ export const RenameQueryModal = ({
     </Dialog>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

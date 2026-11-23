@@ -165,7 +165,7 @@ export const CONNECT_LOGO_LIGHT_TILE_CLASSNAME = 'border-black/10 bg-white'
 /** Supabase symbol (not the wordmark) rendered inset inside a LogoBox. */
 export const SupabaseLogo = ({ forceLight = false }: { forceLight?: boolean } = {}) => (
   <LogoBox className={forceLight ? CONNECT_LOGO_LIGHT_TILE_CLASSNAME : 'bg-surface-75'}>
-    <img alt="Supabase" src={`${BASE_PATH}/img/supabase-logo.svg`} className="size-7" />
+    <img alt="GoBase" src={`${BASE_PATH}/img/supabase-logo.svg`} className="size-7" />
   </LogoBox>
 )
 
@@ -217,3 +217,4 @@ export const InterstitialActionError = ({ error }: { error?: ReactNode }) => {
     </div>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

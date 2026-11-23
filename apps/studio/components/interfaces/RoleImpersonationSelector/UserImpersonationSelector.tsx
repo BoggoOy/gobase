@@ -221,7 +221,7 @@ export const UserImpersonationSelector = ({
           <span className="flex items-center gap-1">
             Users
             <InfoTooltip side="left" className="max-w-80">
-              Project users come from Supabase Auth. External users let you test RLS policies with
+              Project users come from GoBase Auth. External users let you test RLS policies with
               providers such as Clerk or Auth0.
             </InfoTooltip>
           </span>
@@ -493,3 +493,4 @@ const ImpersonationControl = ({
     </Popover>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

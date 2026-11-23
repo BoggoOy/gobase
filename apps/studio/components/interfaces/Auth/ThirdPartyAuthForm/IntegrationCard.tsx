@@ -23,9 +23,9 @@ export const getIntegrationTypeDescription = (type: INTEGRATION_TYPES) => {
     case 'firebase':
       return (
         <>
-          Allow users to use Supabase with Firebase project. You'll need to setup RLS policies for
-          all tables that you want to access with a Firebase JWT token. Additionally, you'll need to
-          add custom code to set the <code>authenticated</code> role to all your present and future
+          Allow users to use GoBase with Firebase project. You'll need to setup RLS policies for all
+          tables that you want to access with a Firebase JWT token. Additionally, you'll need to add
+          custom code to set the <code>authenticated</code> role to all your present and future
           users. You can read more in the{' '}
           <a
             className="hover:decoration-primary underline hover:text-foreground transition"
@@ -40,7 +40,7 @@ export const getIntegrationTypeDescription = (type: INTEGRATION_TYPES) => {
     case 'auth0':
       return (
         <>
-          Allow users to use Supabase with Auth0 project. Additional setup may be required. You can
+          Allow users to use GoBase with Auth0 project. Additional setup may be required. You can
           read more in the{' '}
           <a
             className="hover:decoration-primary underline hover:text-foreground transition"
@@ -54,7 +54,7 @@ export const getIntegrationTypeDescription = (type: INTEGRATION_TYPES) => {
     case 'awsCognito':
       return (
         <>
-          Allow users to use Supabase with an Amazon Cognito. Additional setup may be required. You
+          Allow users to use GoBase with an Amazon Cognito. Additional setup may be required. You
           can read more in the{' '}
           <a
             className="hover:decoration-primary underline hover:text-foreground transition"
@@ -69,8 +69,8 @@ export const getIntegrationTypeDescription = (type: INTEGRATION_TYPES) => {
     case 'clerk':
       return (
         <>
-          Allow users to use Supabase with Clerk. Additional setup may be required. You can read
-          more in the{' '}
+          Allow users to use GoBase with Clerk. Additional setup may be required. You can read more
+          in the{' '}
           <a
             className="hover:decoration-primary underline hover:text-foreground transition"
             href={`${DOCS_URL}/guides/auth/third-party/clerk`}
@@ -84,8 +84,8 @@ export const getIntegrationTypeDescription = (type: INTEGRATION_TYPES) => {
     case 'workos':
       return (
         <>
-          Allow users to use Supabase with WorkOS. Additional setup may be required. You can read
-          more in the{' '}
+          Allow users to use GoBase with WorkOS. Additional setup may be required. You can read more
+          in the{' '}
           <a
             className="hover:decoration-primary underline hover:text-foreground transition"
             href={`${DOCS_URL}/guides/auth/third-party/workos`}
@@ -224,3 +224,4 @@ export const IntegrationCard = ({
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

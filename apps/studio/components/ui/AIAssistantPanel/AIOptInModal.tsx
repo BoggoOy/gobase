@@ -64,7 +64,7 @@ export const AIOptInModal = ({ visible, onCancel, requiredLevel, onSaved }: AIOp
         <Form {...form}>
           <form id="ai-opt-in-form" onSubmit={form.handleSubmit(onSubmit)}>
             <DialogHeader padding="small">
-              <DialogTitle>Update Supabase Assistant Opt-in Level</DialogTitle>
+              <DialogTitle>Update GoBase Assistant Opt-in Level</DialogTitle>
             </DialogHeader>
 
             <DialogSectionSeparator />
@@ -115,3 +115,4 @@ export const AIOptInModal = ({ visible, onCancel, requiredLevel, onSaved }: AIOp
     </Dialog>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

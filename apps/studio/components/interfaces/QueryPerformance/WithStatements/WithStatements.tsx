@@ -233,7 +233,7 @@ export const WithStatements = ({
 
             <DownloadResultsButton
               results={processedData}
-              fileName={`Supabase Query Performance Statements (${ref})`}
+              fileName={`GoBase Query Performance Statements (${ref})`}
               align="end"
             />
           </>
@@ -338,3 +338,4 @@ export const WithStatements = ({
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

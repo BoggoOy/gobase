@@ -39,7 +39,7 @@ export const ErrorCodeTooltip = ({ errorCode, service, children }: ErrorCodeTool
   const docsUrl = sharedDocsUrl
 
   const buildPrompt = () => {
-    const servicePart = service ? ` in Supabase ${service}` : ''
+    const servicePart = service ? ` in GoBase ${service}` : ''
     const descriptionPart = description ? `\n\nError description: ${description}` : ''
     return `I'm encountering error code \`${errorCode}\`${servicePart}.${descriptionPart}\n\nCan you explain what this error means and suggest steps to fix it?`
   }
@@ -98,7 +98,7 @@ export const ErrorCodeTooltip = ({ errorCode, service, children }: ErrorCodeTool
                       ? `${BASE_PATH}/img/supabase-dark.svg`
                       : `${BASE_PATH}/img/supabase-light.svg`
                   }
-                  alt="Supabase"
+                  alt="GoBase"
                   height={14}
                   width={72}
                 />
@@ -128,3 +128,4 @@ export const ErrorCodeTooltip = ({ errorCode, service, children }: ErrorCodeTool
     </HoverCard>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

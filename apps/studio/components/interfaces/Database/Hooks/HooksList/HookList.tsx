@@ -75,7 +75,7 @@ export const HookList = ({ schema, filterString }: HookListProps) => {
                     layout="fixed"
                     width="20"
                     height="20"
-                    title={isEdgeFunction ? 'Supabase Edge Function' : 'HTTP Request'}
+                    title={isEdgeFunction ? 'GoBase Edge Function' : 'HTTP Request'}
                   />
                 </div>
                 <p title={x.name} className="truncate">
@@ -156,3 +156,4 @@ export const HookList = ({ schema, filterString }: HookListProps) => {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

@@ -58,7 +58,7 @@ const ApiKeysNewPage: NextPageWithLayout = () => {
         {isSelfHosted && (
           <Admonition
             type="default"
-            title="Self-hosted Supabase"
+            title="Self-hosted GoBase"
             description={
               <p>
                 <code className="text-code-inline">SUPABASE_PUBLISHABLE_KEY</code> and{' '}
@@ -98,3 +98,4 @@ ApiKeysNewPage.getLayout = (page) => (
 )
 
 export default ApiKeysNewPage
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

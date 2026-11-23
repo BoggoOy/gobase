@@ -1,6 +1,6 @@
 export const PIPELINE_NAME_FIELD_COPY = {
   label: 'Pipeline name',
-  description: 'Used to identify this pipeline in Supabase.',
+  description: 'Used to identify this pipeline in GoBase.',
 } as const
 
 export const BIGQUERY_PROJECT_ID_FIELD_COPY = {
@@ -69,3 +69,4 @@ export const CLICKHOUSE_ENGINE_FIELD_COPY = {
   label: 'Table engine',
   description: 'Controls how ClickHouse stores and queries replicated changes.',
 } as const
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

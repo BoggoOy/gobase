@@ -22,7 +22,7 @@ export function SettingsDatabaseEmptyStateLocal() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Self-Hosted Supabase</CardTitle>
+          <CardTitle>Self-Hosted GoBase</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-foreground-light mb-4">
@@ -52,3 +52,4 @@ export function SettingsDatabaseEmptyStateLocal() {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

@@ -30,7 +30,7 @@ export function VercelIntegrationLogo() {
 export function VercelIntegrationFooter() {
   return (
     <p className="text-xs text-foreground-lighter">
-      You can remove this integration at any time from Vercel or the Supabase dashboard.
+      You can remove this integration at any time from Vercel or the GoBase dashboard.
     </p>
   )
 }
@@ -95,3 +95,4 @@ export function VercelIntegrationInterstitialErrorState({
     </div>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

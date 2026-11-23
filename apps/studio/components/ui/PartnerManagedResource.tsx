@@ -25,7 +25,7 @@ export const PARTNER_TO_NAME = {
   [MANAGED_BY.VERCEL_MARKETPLACE]: 'Vercel Marketplace',
   [MANAGED_BY.AWS_MARKETPLACE]: 'AWS Marketplace',
   [MANAGED_BY.STRIPE_PROJECTS]: 'Stripe Projects',
-  [MANAGED_BY.SUPABASE]: 'Supabase',
+  [MANAGED_BY.SUPABASE]: 'GoBase',
 } as const
 
 function PartnerManagedResource({
@@ -97,3 +97,4 @@ function PartnerManagedResource({
 }
 
 export default PartnerManagedResource
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

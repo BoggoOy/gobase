@@ -17,7 +17,7 @@ export const AccountDeletion = () => {
         <PageSectionSummary>
           <PageSectionTitle>Danger zone</PageSectionTitle>
           <PageSectionDescription>
-            Permanently delete your Supabase account and data.
+            Permanently delete your GoBase account and data.
           </PageSectionDescription>
         </PageSectionSummary>
       </PageSectionMeta>
@@ -38,3 +38,4 @@ export const AccountDeletion = () => {
     </PageSection>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

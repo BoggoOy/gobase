@@ -83,7 +83,7 @@ export const CreateTriggerButtons = ({
               side: 'bottom',
               text: !canCreateTriggers
                 ? 'You need additional permissions to create triggers'
-                : 'Create with Supabase Assistant',
+                : 'Create with GoBase Assistant',
             },
           }}
         />
@@ -91,3 +91,4 @@ export const CreateTriggerButtons = ({
     </div>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

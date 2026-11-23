@@ -4,7 +4,7 @@ import { SupportEmailVerification } from '@/components/interfaces/SupportEmailVe
 import { buildStudioPageTitle } from '@/lib/page-title'
 import type { NextPageWithLayout } from '@/types'
 
-const PAGE_TITLE = buildStudioPageTitle({ section: 'Email Verification', brand: 'Supabase' })
+const PAGE_TITLE = buildStudioPageTitle({ section: 'Email Verification', brand: 'GoBase' })
 
 const VerifyEmailPage: NextPageWithLayout = () => {
   return (
@@ -18,3 +18,4 @@ const VerifyEmailPage: NextPageWithLayout = () => {
 }
 
 export default VerifyEmailPage
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

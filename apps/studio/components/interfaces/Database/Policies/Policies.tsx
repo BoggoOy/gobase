@@ -158,10 +158,9 @@ export const Policies = ({
         {!isSchemaExposedAPI && (
           <Admonition
             type="warning"
-            title="No data from any table in this schema will be selectable via Supabase APIs"
+            title="No data from any table in this schema will be selectable via GoBase APIs"
           >
-            This schema is not exposed via the Supabase APIs. You may configure this in your
-            project’s{' '}
+            This schema is not exposed via the GoBase APIs. You may configure this in your project’s{' '}
             <InlineLink href={`/project/${ref}/integrations/data_api/settings`}>
               Data API settings
             </InlineLink>
@@ -225,3 +224,4 @@ export const Policies = ({
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

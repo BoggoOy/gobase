@@ -224,7 +224,7 @@ export const MarketplaceIndex = () => {
           <PageHeaderSummary>
             <PageHeaderTitle>{pageTitle}</PageHeaderTitle>
             <PageHeaderDescription>
-              Explore native and third-party integrations to add functionality to your Supabase
+              Explore native and third-party integrations to add functionality to your GoBase
               project.
             </PageHeaderDescription>
           </PageHeaderSummary>
@@ -322,3 +322,4 @@ export const MarketplaceIndex = () => {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

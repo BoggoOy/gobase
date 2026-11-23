@@ -33,7 +33,7 @@ export const SSODomains = ({ form }: { form: ReturnType<typeof useForm<SSOConfig
       <FormItemLayout
         label="Email Domains"
         layout="flex-row-reverse"
-        description="Users with these email domains will be redirected to your identity provider when logging in from Supabase."
+        description="Users with these email domains will be redirected to your identity provider when logging in from GoBase."
       >
         <div className="grid gap-2 w-full">
           {fields.map((field, idx) => (
@@ -74,3 +74,4 @@ export const SSODomains = ({ form }: { form: ReturnType<typeof useForm<SSOConfig
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

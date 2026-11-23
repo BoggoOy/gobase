@@ -21,7 +21,7 @@ const ClaimProjectPageLayout = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Head>
-        <title>{`Claim project | ${appTitle ?? 'Supabase'}`}</title>
+        <title>{`Claim project | ${appTitle ?? 'GoBase'}`}</title>
       </Head>
       {children}
     </>
@@ -127,3 +127,4 @@ ClaimProjectPage.getLayout = (page) => (
 )
 
 export default withAuth(ClaimProjectPage)
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

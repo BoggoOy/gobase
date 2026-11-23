@@ -20,7 +20,7 @@ export const CATEGORY_OPTIONS: {
   {
     value: SupportCategories.DASHBOARD_BUG,
     label: 'Dashboard bug',
-    description: 'Issues with the Supabase dashboard',
+    description: 'Issues with the GoBase dashboard',
     query: undefined,
   },
   {
@@ -38,7 +38,7 @@ export const CATEGORY_OPTIONS: {
   {
     value: SupportCategories.ABUSE,
     label: 'Abuse report',
-    description: 'Report abuse of a Supabase project or Supabase brand',
+    description: 'Report abuse of a GoBase project or GoBase brand',
     query: undefined,
   },
   {
@@ -176,3 +176,4 @@ export const IPV4_MIGRATION_STRINGS = [
   'could not translate host name',
   'address family not supported by protocol',
 ]
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

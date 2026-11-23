@@ -155,8 +155,7 @@ export const ChooseChannelPopover = ({
                           </InputGroup>
                         </div>
                         <FormDescription className="text-xs text-foreground-lighter">
-                          The channel you initialize with the Supabase Realtime client. Learn more
-                          in{' '}
+                          The channel you initialize with the GoBase Realtime client. Learn more in{' '}
                           <a
                             target="_blank"
                             rel="noreferrer"
@@ -231,3 +230,4 @@ export const ChooseChannelPopover = ({
     </Popover>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

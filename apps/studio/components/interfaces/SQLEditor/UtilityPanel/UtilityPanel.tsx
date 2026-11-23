@@ -162,7 +162,7 @@ export const UtilityPanel = ({
             <DownloadResultsButton
               variant="text"
               results={result.rows as any[]}
-              fileName={`Supabase Snippet ${snippet?.name ?? 'Results'}`}
+              fileName={`GoBase Snippet ${snippet?.name ?? 'Results'}`}
               onDownloadAsCSV={() => track('sql_editor_result_download_csv_clicked')}
               onCopyAsMarkdown={() => track('sql_editor_result_copy_markdown_clicked')}
               onCopyAsJSON={() => track('sql_editor_result_copy_json_clicked')}
@@ -189,3 +189,4 @@ export const UtilityPanel = ({
     </Tabs>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

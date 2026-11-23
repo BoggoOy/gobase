@@ -5,7 +5,7 @@ import { withAuth } from '@/hooks/misc/withAuth'
 import { buildStudioPageTitle } from '@/lib/page-title'
 import type { NextPageWithLayout } from '@/types'
 
-const PAGE_TITLE = buildStudioPageTitle({ section: 'Store an API key', brand: 'Supabase' })
+const PAGE_TITLE = buildStudioPageTitle({ section: 'Store an API key', brand: 'GoBase' })
 
 const McpSecretsPage: NextPageWithLayout = () => {
   return (
@@ -19,3 +19,4 @@ const McpSecretsPage: NextPageWithLayout = () => {
 }
 
 export default withAuth(McpSecretsPage)
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

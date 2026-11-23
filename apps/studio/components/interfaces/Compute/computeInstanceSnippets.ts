@@ -70,7 +70,7 @@ export function buildComputeInstanceSnippets(
   const entrypointFile = runtimeMeta.entrypoint.split(' ').pop()
 
   const aiPrompt = [
-    `Scaffold and deploy a Supabase Compute instance named "${name}" using the ${runtimeMeta.label} runtime:`,
+    `Scaffold and deploy a GoBase Compute instance named "${name}" using the ${runtimeMeta.label} runtime:`,
     ``,
     `1. Create a supabase/${CLI_NAME}/${name}/ directory with a ${runtimeMeta.label} entrypoint (${entrypointFile}) that responds with "Hello, world!".`,
     ``,
@@ -124,3 +124,4 @@ export function buildComputeInstanceCliCommands(name: string): ComputeInstanceCl
     { comment: 'Delete the instance', command: `supabase ${CLI_NAME} delete ${slug}` },
   ]
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

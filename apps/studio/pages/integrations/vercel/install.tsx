@@ -45,7 +45,7 @@ import type { NextPageWithLayout, Organization } from '@/types'
 
 const PAGE_TITLE = buildStudioPageTitle({
   section: 'Install Vercel Integration',
-  brand: 'Supabase',
+  brand: 'GoBase',
 })
 
 /**
@@ -265,7 +265,7 @@ const VercelIntegration: NextPageWithLayout = () => {
       <InterstitialLayout
         logo={<VercelIntegrationLogo />}
         title="Install Vercel integration"
-        description="Choose the Supabase organization Vercel can connect to"
+        description="Choose the GoBase organization Vercel can connect to"
         footer={<VercelIntegrationFooter />}
       >
         <div className="px-6 pb-6">
@@ -305,11 +305,11 @@ const VercelIntegration: NextPageWithLayout = () => {
               {noOrganizations && (
                 <Admonition
                   type="warning"
-                  title="No Supabase organizations found"
+                  title="No GoBase organizations found"
                   description={
                     <>
-                      Create a Supabase organization before installing the Vercel integration. You
-                      can create a new organization{' '}
+                      Create a GoBase organization before installing the Vercel integration. You can
+                      create a new organization{' '}
                       <Link href="https://supabase.com/dashboard/new" target="_blank">
                         here
                       </Link>
@@ -386,7 +386,7 @@ function OrganizationSelect({
           if (org) onSelectedOrgChange(org)
         }}
       >
-        <SelectTrigger size="small" aria-label="Supabase organization to install Vercel into">
+        <SelectTrigger size="small" aria-label="GoBase organization to install Vercel into">
           <SelectValue placeholder="Choose an organization" />
         </SelectTrigger>
         <SelectContent>
@@ -405,3 +405,4 @@ function OrganizationSelect({
 }
 
 export default withAuth(VercelIntegration)
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

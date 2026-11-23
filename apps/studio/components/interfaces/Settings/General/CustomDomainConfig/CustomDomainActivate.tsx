@@ -123,10 +123,11 @@ export const CustomDomainActivate = ({ projectRef, customDomain }: CustomDomainA
       >
         <p className="text-sm">
           Activating <code className="text-code-inline break-normal!">{customDomain.hostname}</code>{' '}
-          will make it visible to users in place of your project’s Supabase domain. The Supabase
-          domain will continue to work too.
+          will make it visible to users in place of your project’s GoBase domain. The GoBase domain
+          will continue to work too.
         </p>
       </ConfirmationModal>
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

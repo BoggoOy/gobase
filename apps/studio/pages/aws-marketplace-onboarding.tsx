@@ -6,7 +6,7 @@ import { withAuth } from '@/hooks/misc/withAuth'
 import { buildStudioPageTitle } from '@/lib/page-title'
 import type { NextPageWithLayout } from '@/types'
 
-const PAGE_TITLE = buildStudioPageTitle({ section: 'Link AWS Marketplace', brand: 'Supabase' })
+const PAGE_TITLE = buildStudioPageTitle({ section: 'Link AWS Marketplace', brand: 'GoBase' })
 
 const AwsMarketplaceOnboardingPage: NextPageWithLayout = () => {
   const router = useRouter()
@@ -25,3 +25,4 @@ const AwsMarketplaceOnboardingPage: NextPageWithLayout = () => {
 }
 
 export default withAuth(AwsMarketplaceOnboardingPage)
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

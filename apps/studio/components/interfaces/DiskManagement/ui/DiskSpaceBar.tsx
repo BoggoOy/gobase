@@ -194,9 +194,9 @@ export const DiskSpaceBar = ({ form }: DiskSpaceBarProps) => {
                 >
                   <h3 className="text-sm font-medium text-foreground">Autoscaling</h3>
                   <p>
-                    Supabase expands your disk storage automatically when the database reaches 90%
-                    of the disk size. However, disk modifications, including auto-scaling, are
-                    limited to 4 within a rolling 24-hour window.
+                    GoBase expands your disk storage automatically when the database reaches 90% of
+                    the disk size. However, disk modifications, including auto-scaling, are limited
+                    to 4 within a rolling 24-hour window.
                   </p>
                   <p>
                     If you exhaust these modifications and reach 95% of the disk space, your project{' '}
@@ -271,3 +271,4 @@ const LegendItem = ({
     </TooltipContent>
   </Tooltip>
 )
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

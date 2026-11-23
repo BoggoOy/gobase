@@ -77,7 +77,7 @@ const LinterFilters = ({
         <DownloadResultsButton
           align="end"
           results={filteredLints}
-          fileName={`Supabase Performance Security Lints (${ref})`}
+          fileName={`GoBase Performance Security Lints (${ref})`}
         />
       </div>
     </div>
@@ -85,3 +85,4 @@ const LinterFilters = ({
 }
 
 export default LinterFilters
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

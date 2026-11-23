@@ -319,7 +319,7 @@ export const FunctionsList = () => {
                       side: 'bottom',
                       text: !canCreateFunctions
                         ? 'You need additional permissions to create functions'
-                        : 'Create with Supabase Assistant',
+                        : 'Create with GoBase Assistant',
                     },
                   }}
                 />
@@ -464,3 +464,4 @@ const CreateFunctionButton = ({
     )
   }
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

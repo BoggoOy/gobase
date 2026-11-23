@@ -637,7 +637,7 @@ const TEMPLATE_INTEGRATIONS: Array<IntegrationDefinition> = [
       { label: 'Creates a new database schema named `stripe`' },
       { label: 'Creates tables and views in the `stripe` schema for synced Stripe data' },
       { label: 'Deploys Edge Functions to handle incoming webhooks from Stripe' },
-      { label: 'Schedules automatic Stripe data syncs using Supabase Queues' },
+      { label: 'Schedules automatic Stripe data syncs using GoBase Queues' },
     ],
     installationCommand: async ({ ref: projectRef, track, stripe_api_key }) => {
       const startTime = Date.now()
@@ -712,3 +712,4 @@ export const Loading = () => (
     <GenericSkeletonLoader />
   </div>
 )
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

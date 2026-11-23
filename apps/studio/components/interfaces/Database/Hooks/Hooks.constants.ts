@@ -30,9 +30,10 @@ export const AVAILABLE_WEBHOOK_TYPES = [
         {
           value: 'supabase_function',
           icon: `${BASE_PATH}/img/function-providers/supabase-severless-function.png`,
-          label: 'Supabase Edge Functions',
-          description: 'Choose a Supabase edge function to run.',
+          label: 'GoBase Edge Functions',
+          description: 'Choose a GoBase edge function to run.',
         },
       ]
     : []),
 ]
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

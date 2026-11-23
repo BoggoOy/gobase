@@ -92,7 +92,7 @@ export const ThemeSettings = () => {
         <PageSectionSummary>
           <PageSectionTitle>Appearance</PageSectionTitle>
           <PageSectionDescription>
-            Choose how Supabase looks and behaves in the dashboard.
+            Choose how GoBase looks and behaves in the dashboard.
           </PageSectionDescription>
         </PageSectionSummary>
       </PageSectionMeta>
@@ -104,7 +104,7 @@ export const ThemeSettings = () => {
                 Theme mode
               </Label>
               <p className="text-sm text-foreground-lighter">
-                Choose how Supabase looks to you. Select a single theme, or sync with your system.
+                Choose how GoBase looks to you. Select a single theme, or sync with your system.
               </p>
             </div>
 
@@ -141,3 +141,4 @@ export const ThemeSettings = () => {
     </PageSection>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

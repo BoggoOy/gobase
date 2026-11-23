@@ -102,7 +102,7 @@ export const DiskSizeConfiguration = ({ disabled = false }: DiskSizeConfiguratio
                       )}
                       <div className="grid grid-cols-2 items-center">
                         <p className="text-sm text-lighter max-w-lg">
-                          Supabase employs auto-scaling storage and allows for manual disk size
+                          GoBase employs auto-scaling storage and allows for manual disk size
                           adjustments when necessary
                         </p>
                         {!isAwsNimbus && (
@@ -225,3 +225,4 @@ Read more about [disk management](${DOCS_URL}/guides/platform/database-size#disk
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

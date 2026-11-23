@@ -125,7 +125,7 @@ export const CreateFirebaseAuthIntegrationDialog = ({
 
               <p className="text-sm text-foreground-light">
                 This will enable a JWT token from a specific Firebase project to access data from
-                this Supabase project.
+                this GoBase project.
               </p>
               <FormField
                 key="firebaseProjectId"
@@ -168,3 +168,4 @@ export const CreateFirebaseAuthIntegrationDialog = ({
     </Dialog>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

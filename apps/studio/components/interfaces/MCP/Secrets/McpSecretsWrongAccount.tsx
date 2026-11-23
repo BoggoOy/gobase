@@ -12,7 +12,7 @@ export const McpSecretsWrongAccount = ({
 }) => (
   <InterstitialShell
     title="This account has no access"
-    subtitle="It was created by a different Supabase account."
+    subtitle="It was created by a different GoBase account."
   >
     <InterstitialAccountRow displayName={signedInAs} />
 
@@ -32,3 +32,4 @@ export const McpSecretsWrongAccount = ({
     </InterstitialFooter>
   </InterstitialShell>
 )
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

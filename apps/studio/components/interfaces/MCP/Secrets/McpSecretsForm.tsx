@@ -61,7 +61,7 @@ export const McpSecretsForm = ({
   return (
     <InterstitialShell
       title="Store an API key"
-      subtitle="Supabase is asking for this key on behalf of a tool call. It never passes through your AI client."
+      subtitle="GoBase is asking for this key on behalf of a tool call. It never passes through your AI client."
     >
       <McpSecretsDetails request={request} />
 
@@ -184,3 +184,4 @@ export const McpSecretsForm = ({
     </InterstitialShell>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

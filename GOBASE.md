@@ -26,7 +26,11 @@ commit the image was built from. `docker/versions.md` lists the tags shipped wit
 2. Pick the Studio image tag to move to (normally the one in the newest self-hosted release in
    `docker/versions.md`).
 3. On `gobase`, merge that commit: `git merge <commit>`. Resolve conflicts, keeping upstream behavior intact.
-4. Run `pnpm --filter studio run typecheck`, `pnpm --filter studio run test`, then build the image.
+4. Run `python3 scripts/gobase/rebrand-studio.py apply` to rename new user-facing "Supabase" text. If a renamed
+   file conflicts, take the upstream version (`git checkout --theirs <file>`) and re-run the script. Review the
+   output: new strings that name a real Supabase tool need an exception in the script.
+5. Run `pnpm --filter studio run typecheck`, `pnpm --filter studio run test`, then build the image. Tests that assert
+   renamed text need the same rename.
 
 ## Public repository rules
 
@@ -53,7 +57,11 @@ placeholders such as `https://gobase-api.example.com`.
 
 ## Naming
 
-- Product name in the UI: **GoBase**, described as "Supabase-compatible" (Finnish: "Supabase-yhteensopiva").
+- Product name in the UI: **GoBase** (Supabase-compatible). User-facing "Supabase" text in Studio is renamed to
+  "GoBase" by `scripts/gobase/rebrand-studio.py`.
+- Kept as "Supabase": real Supabase tools and products (Supabase CLI, client libraries such as supabase-js, Supabase
+  docs, Vault, Wrappers, Management API, third-party product names such as the NextAuth Supabase Adapter), Supabase
+  Inc legal, billing and marketplace texts, AI prompts, protocol identifiers and code.
 - Do not use Supabase logos or imply that GoBase is operated or endorsed by Supabase.
 
 ## License and attribution
@@ -62,18 +70,21 @@ Supabase is licensed under the [Apache License 2.0](LICENSE). Keep all existing 
 
 - When modifying an upstream file, add a short comment near the top: `// Modified by Boggo Oy for GoBase.`
 - New GoBase files start with: `// Copyright Boggo Oy. Licensed under the Apache License 2.0.`
-- List modified upstream files in the "Modified upstream files" section below.
+- List modified upstream files in the "Modified upstream files" section below. Files changed only by the rename
+  script carry the notice at the end of the file instead (fewer merge conflicts) and are not listed one by one.
 - The Boggo name and logo are trademarks of Boggo Oy and are not licensed under the Apache License 2.0
   (see section 6 of the license).
 
 ## Modified upstream files
 
-| File                                                                  | Change                                                                                                |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `apps/studio/pages/project/[ref]/index.tsx`                           | Self-hosted projects render `GoBaseHome` instead of `ProjectHome`.                                    |
-| `apps/studio/components/layouts/Navigation/LayoutHeader/HomeIcon.tsx` | Header shows the Boggo logo (`public/img/gobase/boggo-logo.svg`).                                     |
-| `apps/studio/hooks/custom-content/custom-content.json`                | `app:title` is `GoBase` (browser tab titles). JSON has no comments, so this table is the only marker. |
-| `apps/studio/pages/_app.tsx`                                          | Favicon route `/img/gobase/favicon` and application name `GoBase`.                                    |
+| File                                                                            | Change                                                                                                |
+| ------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `apps/studio/pages/project/[ref]/index.tsx`                                     | Self-hosted projects render `GoBaseHome` instead of `ProjectHome`.                                    |
+| `apps/studio/components/layouts/Navigation/LayoutHeader/HomeIcon.tsx`           | Header shows the Boggo logo (`public/img/gobase/boggo-logo.svg`).                                     |
+| `apps/studio/hooks/custom-content/custom-content.json`                          | `app:title` is `GoBase` (browser tab titles). JSON has no comments, so this table is the only marker. |
+| `apps/studio/pages/_app.tsx`                                                    | Favicon route `/img/gobase/favicon` and application name `GoBase`.                                    |
+| `apps/studio/tests/pages/project/[ref]/index.test.tsx`                          | Expects `GoBaseHome` on self-hosted.                                                                  |
+| About 145 Studio files (see `git grep "renamed to \"GoBase\""`) and their tests | User-facing "Supabase" text renamed to "GoBase" by `scripts/gobase/rebrand-studio.py`.                |
 
 The TanStack route `apps/studio/routes/project/$ref/index.tsx` re-exports this page, so it needs no change.
 

@@ -36,7 +36,7 @@ import type { NextPageWithLayout, Organization } from '@/types'
 
 const PAGE_TITLE = buildStudioPageTitle({
   section: 'Connect Vercel Project',
-  brand: 'Supabase',
+  brand: 'GoBase',
 })
 
 const VercelChooseProjectPage: NextPageWithLayout = () => {
@@ -247,3 +247,4 @@ const ChooseProjectLoadingState = () => (
 )
 
 export default withAuth(VercelChooseProjectPage)
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

@@ -46,7 +46,7 @@ const SecretsPage: NextPageWithLayout = () => {
             {isSelfHosted && (
               <Admonition
                 type="default"
-                title="Self-hosted Supabase"
+                title="Self-hosted GoBase"
                 description={<p>Set custom secrets via environment variables.</p>}
                 actions={
                   <DocsButton
@@ -118,3 +118,4 @@ SecretsPage.getLayout = (page) => (
 )
 
 export default SecretsPage
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

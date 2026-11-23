@@ -213,7 +213,7 @@ if (process.env.NODE_ENV === 'development' || process.env.NEXT_PUBLIC_ENVIRONMEN
   FAVICON_ROUTE = '/favicon/local'
 }
 const THEME_COLOR = '1E1E1E'
-const APPLICATION_NAME = 'Supabase Studio'
+const APPLICATION_NAME = 'GoBase Studio'
 
 function buildRootHead(faviconRoute = FAVICON_ROUTE) {
   const meta: Array<Record<string, string>> = [
@@ -223,7 +223,7 @@ function buildRootHead(faviconRoute = FAVICON_ROUTE) {
     { name: 'googlebot', content: 'notranslate' },
     { name: 'application-name', content: APPLICATION_NAME },
     { name: 'theme-color', content: `#${THEME_COLOR}` },
-    { title: 'Supabase' },
+    { title: 'GoBase' },
   ]
 
   const links: Array<Record<string, string>> = [
@@ -417,3 +417,4 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     </html>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

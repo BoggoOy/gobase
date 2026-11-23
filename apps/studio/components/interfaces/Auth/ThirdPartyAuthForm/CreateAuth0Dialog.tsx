@@ -121,8 +121,8 @@ export const CreateAuth0IntegrationDialog = ({
             />
             <Separator /> */}
               <p className="text-sm text-foreground-light">
-                This will enable a JWT token from your Auth0 project to access data from this
-                Supabase project.
+                This will enable a JWT token from your Auth0 project to access data from this GoBase
+                project.
               </p>
               <FormField
                 key="auth0DomainName"
@@ -181,3 +181,4 @@ export const CreateAuth0IntegrationDialog = ({
     </Dialog>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

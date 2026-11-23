@@ -206,7 +206,7 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
                   <TimezoneProvider>
                     <TimestampInfoTimezoneBridge>
                       <Head>
-                        <title>{appTitle ?? 'Supabase'}</title>
+                        <title>{appTitle ?? 'GoBase'}</title>
                         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                         <meta property="og:image" content={`${BASE_PATH}/img/supabase-og.png`} />
                         <meta name="googlebot" content="notranslate" />
@@ -277,3 +277,4 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
 }
 
 export default CustomApp
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

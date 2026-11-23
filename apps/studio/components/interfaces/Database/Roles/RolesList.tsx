@@ -250,7 +250,7 @@ export const RolesList = () => {
       <div className="space-y-4">
         <div>
           <div className="bg-surface-100 border border-default px-card py-3 rounded-t flex items-center space-x-4">
-            <p className="text-sm text-foreground-light">Roles managed by Supabase</p>
+            <p className="text-sm text-foreground-light">Roles managed by GoBase</p>
             <Badge variant="success">Protected</Badge>
           </div>
 
@@ -305,3 +305,4 @@ export const RolesList = () => {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

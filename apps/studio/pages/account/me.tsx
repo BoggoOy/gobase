@@ -163,7 +163,7 @@ const ProfileLoadingSections = ({
         <PageSectionSummary>
           <PageSectionTitle>Sign-in methods</PageSectionTitle>
           <PageSectionDescription>
-            Manage the providers linked to your Supabase account and update their details.
+            Manage the providers linked to your GoBase account and update their details.
           </PageSectionDescription>
         </PageSectionSummary>
       </PageSectionMeta>
@@ -214,3 +214,4 @@ const SelfHostedPreferences = () => {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

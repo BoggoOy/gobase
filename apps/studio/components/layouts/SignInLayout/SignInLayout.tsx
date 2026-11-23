@@ -183,10 +183,10 @@ export const SignInLayout = ({
             right={<SupabaseLogo />}
           />
         }
-        title={destination ? `Continue to ${destination.displayName}` : `${verb} to Supabase`}
+        title={destination ? `Continue to ${destination.displayName}` : `${verb} to GoBase`}
         description={
           destination
-            ? `${verb} to Supabase using your ${focusProvider.displayName} account`
+            ? `${verb} to GoBase using your ${focusProvider.displayName} account`
             : `Use your ${focusProvider.displayName} account to continue`
         }
         footer={
@@ -227,7 +227,7 @@ export const SignInLayout = ({
                         ? `${BASE_PATH}/img/supabase-dark.svg`
                         : `${BASE_PATH}/img/supabase-light.svg`
                     }
-                    alt="Supabase Logo"
+                    alt="GoBase Logo"
                     className={largeLogo ? 'h-[48px]' : 'h-[24px]'}
                   />
                 </Link>
@@ -310,3 +310,4 @@ export const SignInLayout = ({
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

@@ -40,8 +40,8 @@ export const CRONJOB_DEFINITIONS = [
   {
     value: 'edge_function',
     icon: <EdgeFunctions strokeWidth={1} />,
-    label: 'Supabase Edge Function',
-    description: 'Choose a Supabase edge function to run.',
+    label: 'GoBase Edge Function',
+    description: 'Choose a GoBase edge function to run.',
   },
 ]
 
@@ -67,3 +67,4 @@ export const CRON_TABLE_COLUMNS: CronTableColumn[] = [
   { id: 'active', name: 'Active', width: 70, minWidth: 70, maxWidth: 70, resizable: false },
   { id: 'actions', name: '', minWidth: 75, width: 75, resizable: false },
 ]
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

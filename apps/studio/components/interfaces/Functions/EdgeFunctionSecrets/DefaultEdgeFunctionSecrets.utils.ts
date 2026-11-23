@@ -10,7 +10,7 @@ export interface DefaultEdgeFunctionSecret {
 export const DEFAULT_EDGE_FUNCTION_SECRETS: DefaultEdgeFunctionSecret[] = [
   {
     name: 'SUPABASE_URL',
-    description: 'The API gateway for your Supabase project.',
+    description: 'The API gateway for your GoBase project.',
     isRuntime: false,
   },
   {
@@ -90,3 +90,4 @@ export const getVisibleDefaultEdgeFunctionSecrets = (apiSecretNames: Set<string>
 
   return [...visibleStaticDefaults, ...runtimeDefaults]
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

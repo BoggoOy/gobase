@@ -208,7 +208,7 @@ export function ApiAuthorizationValidScreen({
   const effectiveOrganizationSlug = organization_slug
   const effectiveApprovalState = approvalState
   const pageTitle = effectiveRequester
-    ? buildStudioPageTitle({ section: `Authorize ${effectiveRequester.name}`, brand: 'Supabase' })
+    ? buildStudioPageTitle({ section: `Authorize ${effectiveRequester.name}`, brand: 'GoBase' })
     : undefined
 
   if (!effectiveRequester) {
@@ -252,3 +252,4 @@ export function ApiAuthorizationValidScreen({
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

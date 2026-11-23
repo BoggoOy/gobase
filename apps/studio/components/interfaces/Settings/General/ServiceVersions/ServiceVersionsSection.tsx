@@ -190,7 +190,7 @@ export const ServiceVersionsSection = () => {
                                       </Badge>
                                     </TooltipTrigger>
                                     <TooltipContent side="bottom" className="w-52 text-center">
-                                      Project is on the latest version of Postgres that Supabase
+                                      Project is on the latest version of Postgres that GoBase
                                       supports
                                     </TooltipContent>
                                   </Tooltip>
@@ -227,3 +227,4 @@ export const ServiceVersionsSection = () => {
     </PageSection>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

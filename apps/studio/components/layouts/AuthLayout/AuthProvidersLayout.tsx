@@ -15,7 +15,7 @@ export const AuthProvidersLayout = ({ children }: PropsWithChildren<{}>) => {
 
   const navItems = [
     {
-      label: 'Supabase Auth',
+      label: 'GoBase Auth',
       href: `/project/${ref}/auth/providers`,
     },
     ...(authenticationThirdPartyAuth
@@ -44,3 +44,4 @@ export const AuthProvidersLayout = ({ children }: PropsWithChildren<{}>) => {
     </AuthLayout>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

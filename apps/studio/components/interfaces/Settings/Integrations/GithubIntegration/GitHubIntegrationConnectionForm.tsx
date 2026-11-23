@@ -725,7 +725,7 @@ export const GitHubIntegrationConnectionForm = ({
         loading={isUpdatingConnection}
       >
         <p className="text-sm text-foreground-light">
-          Open pull requests will only update your Supabase project on merge if the git base branch
+          Open pull requests will only update your GoBase project on merge if the git base branch
           matches this new production git branch.
         </p>
       </ConfirmationModal>
@@ -743,7 +743,7 @@ export const GitHubIntegrationConnectionForm = ({
         <div className="space-y-3">
           <p className="text-sm text-foreground-light">
             This will disconnect your current repository and create a new connection with the
-            selected repository. All existing Supabase branches that are connected to the old
+            selected repository. All existing GoBase branches that are connected to the old
             repository will no longer be synced.
           </p>
         </div>
@@ -751,3 +751,4 @@ export const GitHubIntegrationConnectionForm = ({
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

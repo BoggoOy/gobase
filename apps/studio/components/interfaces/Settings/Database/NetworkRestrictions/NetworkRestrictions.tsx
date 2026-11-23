@@ -277,8 +277,7 @@ export const NetworkRestrictions = () => {
                           project's database.
                         </p>
                         <p className="text-foreground-light text-sm">
-                          Note: Restrictions only apply to your database, and not to Supabase
-                          services
+                          Note: Restrictions only apply to your database, and not to GoBase services
                         </p>
                       </div>
                     </div>
@@ -300,8 +299,7 @@ export const NetworkRestrictions = () => {
                           your database.
                         </p>
                         <p>
-                          Note: Restrictions only apply to your database, and not to Supabase
-                          services
+                          Note: Restrictions only apply to your database, and not to GoBase services
                         </p>
                       </CardDescription>
                       <div className="flex items-center space-x-2">
@@ -370,3 +368,4 @@ export const NetworkRestrictions = () => {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

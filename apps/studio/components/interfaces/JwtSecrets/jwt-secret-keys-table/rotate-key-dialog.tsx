@@ -59,7 +59,7 @@ export function RotateKeyDialog({
       <DialogHeader>
         <DialogTitle>Rotate JWT signing key</DialogTitle>
         <DialogDescription>
-          Change the key used by Supabase Auth to create new JSON Web Tokens. Non-expired tokens
+          Change the key used by GoBase Auth to create new JSON Web Tokens. Non-expired tokens
           remain <span className="text-primary">valid and accepted</span>!
         </DialogDescription>
       </DialogHeader>
@@ -194,7 +194,7 @@ export function RotateKeyDialog({
                     className: 'max-w-[320px] p-4',
                     text: (
                       <p>
-                        Rotating the signing key only changes what key is used by Supabase Auth to
+                        Rotating the signing key only changes what key is used by GoBase Auth to
                         issue <em className="text-primary not-italic">new tokens</em>
                         .<br />
                         <br />
@@ -291,3 +291,4 @@ export function RotateKeyDialog({
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

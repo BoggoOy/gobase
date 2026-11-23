@@ -18,13 +18,13 @@ export const ProtectedSchemaDialog = ({ onClose }: { onClose: () => void }) => {
   return (
     <>
       <DialogHeader>
-        <DialogTitle>Schemas managed by Supabase</DialogTitle>
+        <DialogTitle>Schemas managed by GoBase</DialogTitle>
       </DialogHeader>
       <DialogSectionSeparator />
       <DialogSection className="space-y-2 prose">
         <p className="text-sm">
-          The following schemas are managed by Supabase and are currently protected from write
-          access through the dashboard.
+          The following schemas are managed by GoBase and are currently protected from write access
+          through the dashboard.
         </p>
         <div className="flex flex-wrap gap-1">
           {INTERNAL_SCHEMAS.map((schema) => (
@@ -34,8 +34,8 @@ export const ProtectedSchemaDialog = ({ onClose }: { onClose: () => void }) => {
           ))}
         </div>
         <p className="text-sm mt-4!">
-          These schemas are critical to the functionality of your Supabase project and hence we
-          highly recommend not altering them.
+          These schemas are critical to the functionality of your GoBase project and hence we highly
+          recommend not altering them.
         </p>
         <p className="text-sm">
           You can, however, still interact with those schemas through the SQL Editor although we
@@ -111,3 +111,4 @@ export const ProtectedSchemaWarning = ({
     />
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

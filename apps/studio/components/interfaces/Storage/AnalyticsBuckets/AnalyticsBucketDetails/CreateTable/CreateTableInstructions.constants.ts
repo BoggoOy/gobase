@@ -22,7 +22,7 @@ from pyiceberg.catalog import load_catalog
 import pyarrow as pa
 import datetime
 
-# Supabase project ref
+# GoBase project ref
 PROJECT_REF = "${ref ?? '<your-supabase-project-ref>'}"
 
 # Configuration for Iceberg REST Catalog
@@ -86,3 +86,4 @@ print("Completed!")
 df = table.scan().to_pandas()
 print(df)
 `.trim()
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

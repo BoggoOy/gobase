@@ -14,7 +14,7 @@ function ClaimProject() {
   return (
     <>
       <Head>
-        <title>{`Claim project | ${appTitle ?? 'Supabase'}`}</title>
+        <title>{`Claim project | ${appTitle ?? 'GoBase'}`}</title>
       </Head>
       <main className="flex flex-col w-full min-h-screen overflow-y-auto">
         <ClaimProjectPage dehydratedState={undefined} />
@@ -22,3 +22,4 @@ function ClaimProject() {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

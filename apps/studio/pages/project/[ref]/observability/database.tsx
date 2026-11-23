@@ -522,7 +522,7 @@ const renderDatabaseSizeAdditionalInfo = () => {
         <AlertDescription>
           <div className="space-y-2">
             <p>
-              New Supabase projects have a database size of ~40-60mb. This space includes
+              New GoBase projects have a database size of ~40-60mb. This space includes
               pre-installed extensions, schemas, and default Postgres data. Additional database size
               is used when installing extensions, even if those extensions are inactive.
             </p>
@@ -542,3 +542,4 @@ const renderDatabaseSizeAdditionalInfo = () => {
     </div>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

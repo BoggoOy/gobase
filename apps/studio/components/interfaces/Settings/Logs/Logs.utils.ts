@@ -961,7 +961,7 @@ export function buildLogsPrompt(
     (sqlQuery ? extractServiceLabelFromSql(sqlQuery) : null)
   const serviceContext = serviceLabel ? ` from the **${serviceLabel}** service` : ''
   const sqlContext = sqlQuery ? `\n\n**Query used:**\n\`\`\`sql\n${sqlQuery.trim()}\n\`\`\`` : ''
-  const header = `I have ${rows.length} Supabase log entr${rows.length === 1 ? 'y' : 'ies'}${serviceContext} I'd like help debugging:\n\n`
+  const header = `I have ${rows.length} GoBase log entr${rows.length === 1 ? 'y' : 'ies'}${serviceContext} I'd like help debugging:\n\n`
   const body = formatLogsAsMarkdown(rows)
   return (
     header +
@@ -970,3 +970,4 @@ export function buildLogsPrompt(
     '\n\nWhat do these logs indicate? What steps can I take to resolve it? Keep your answer very concise and actionable. Max 2 or 3 bullet points.'
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

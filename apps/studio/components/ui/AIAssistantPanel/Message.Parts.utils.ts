@@ -81,7 +81,7 @@ function forAdvisorType(input: unknown) {
 const TOOL_LABELS: Record<string, ToolLabels> = {
   search_docs: { running: 'Searching docs', done: 'Searched docs', detail: forDocsQuery },
   load_knowledge: { running: 'Reading up', done: 'Read up', detail: onKnowledgeTopic },
-  get_active_incidents: { running: 'Checking Supabase status', done: 'Checked Supabase status' },
+  get_active_incidents: { running: 'Checking GoBase status', done: 'Checked GoBase status' },
   list_policies: { running: 'Checking policies', done: 'Checked policies', detail: inSchemas },
   list_tables: { running: 'Listing tables', done: 'Listed tables', detail: inSchemas },
   list_extensions: { running: 'Listing extensions', done: 'Listed extensions' },
@@ -217,3 +217,4 @@ export function getToolGroupSummary(parts: CompactPart[]): string {
   if (rest.length === 0) return `${first} and ${lowerFirst(second)}`
   return `${first}, ${lowerFirst(second)}, and ${rest.length} more`
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

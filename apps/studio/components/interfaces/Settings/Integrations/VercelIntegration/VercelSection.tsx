@@ -139,8 +139,8 @@ export const VercelSection = ({ isProjectScoped }: { isProjectScoped: boolean })
     'connection'
   )} `
   const description = isProjectScoped
-    ? 'Connect Vercel projects to this Supabase project. Supabase keeps environment variables up to date in each connected Vercel project.'
-    : 'Connect your Vercel teams to this Supabase organization. Supabase keeps environment variables up to date in each connected project. You can also link multiple Vercel projects to the same Supabase project.'
+    ? 'Connect Vercel projects to this GoBase project. GoBase keeps environment variables up to date in each connected Vercel project.'
+    : 'Connect your Vercel teams to this GoBase organization. GoBase keeps environment variables up to date in each connected project. You can also link multiple Vercel projects to the same GoBase project.'
 
   return (
     <PageSection>
@@ -235,3 +235,4 @@ export const VercelSection = ({ isProjectScoped }: { isProjectScoped: boolean })
     </PageSection>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

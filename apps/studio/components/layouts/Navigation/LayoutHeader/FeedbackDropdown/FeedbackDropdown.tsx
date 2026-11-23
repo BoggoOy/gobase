@@ -79,7 +79,7 @@ export const FeedbackDropdown = ({ className }: { className?: string }) => {
                   <Lightbulb size="28" className="mx-auto text-warning" />
                   <div className="flex flex-col items-center">
                     <span className="text-base">Idea</span>
-                    <span className="text-xs text-foreground-lighter">to improve Supabase</span>
+                    <span className="text-xs text-foreground-lighter">to improve GoBase</span>
                   </div>
                 </div>
               </Button>
@@ -125,3 +125,4 @@ export const FeedbackDropdown = ({ className }: { className?: string }) => {
     </Popover>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

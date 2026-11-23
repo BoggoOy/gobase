@@ -41,7 +41,7 @@ export const RealtimeLayout = ({ title, children }: PropsWithChildren<RealtimeLa
       <>
         <Head>
           <title>{title}</title>
-          <meta name="description" content="Supabase Studio" />
+          <meta name="description" content="GoBase Studio" />
         </Head>
         <main
           id="panel-project-content"
@@ -71,3 +71,4 @@ export const RealtimeLayout = ({ title, children }: PropsWithChildren<RealtimeLa
 }
 
 export default withAuth(RealtimeLayout)
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

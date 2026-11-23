@@ -133,7 +133,7 @@ export const General = () => {
           {isSelfHosted && (
             <Admonition
               type="default"
-              title="Self-hosted Supabase"
+              title="Self-hosted GoBase"
               description={<p>Project settings are configured via environment variables.</p>}
               actions={<DocsButton href={`${DOCS_URL}/guides/self-hosting`} />}
             />
@@ -273,3 +273,4 @@ export const General = () => {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

@@ -60,12 +60,12 @@ export const QUERY_PERFORMANCE_ROLE_DESCRIPTION = [
   {
     name: 'dashboard_user',
     description:
-      'The Supabase Dashboard doesn\'t connect as this role. Dashboard queries execute as postgres and include a "-- source: dashboard" comment.',
+      'The GoBase Dashboard doesn\'t connect as this role. Dashboard queries execute as postgres and include a "-- source: dashboard" comment.',
   },
   {
     name: 'supabase_admin',
     description:
-      'An internal role Supabase uses for administrative tasks, such as running upgrades and automations.',
+      'An internal role GoBase uses for administrative tasks, such as running upgrades and automations.',
   },
   {
     name: 'pgbouncer',
@@ -92,3 +92,4 @@ export const QUERY_PERFORMANCE_CHART_TABS = [
     label: 'Cache hits',
   },
 ]
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

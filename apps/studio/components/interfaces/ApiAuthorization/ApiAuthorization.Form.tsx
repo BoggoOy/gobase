@@ -110,7 +110,7 @@ export function ApiAuthorizationMainView({
         />
       }
       title={`Authorize ${requester.name}`}
-      description="This application wants to access your Supabase account"
+      description="This application wants to access your GoBase account"
     >
       <div className="px-6 pb-6">
         <span className="sr-only">Authorize API access for {requester.name}</span>
@@ -390,3 +390,4 @@ function ApprovalButton({
     </Button>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

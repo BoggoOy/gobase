@@ -14,7 +14,7 @@ export const SuspensionNotice = ({ suspendedAt }: { suspendedAt?: string | null 
       layout="horizontal"
       className="mb-4"
       type="warning"
-      title="Supabase has suspended Realtime for this project"
+      title="GoBase has suspended Realtime for this project"
       description={
         <>
           Suspended since{' '}
@@ -43,3 +43,4 @@ export const SuspensionNotice = ({ suspendedAt }: { suspendedAt?: string | null 
     />
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".

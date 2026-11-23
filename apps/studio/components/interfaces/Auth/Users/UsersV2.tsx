@@ -1000,7 +1000,7 @@ export const UsersV2 = () => {
             >
               project logs
             </InlineLink>
-            . If you encounter any issues, please contact Supabase support for assistance.
+            . If you encounter any issues, please contact GoBase support for assistance.
           </li>
         </ul>
       </ConfirmationModal>
@@ -1022,3 +1022,4 @@ export const UsersV2 = () => {
     </>
   )
 }
+// Modified by Boggo Oy for GoBase: user-facing "Supabase" text renamed to "GoBase".
