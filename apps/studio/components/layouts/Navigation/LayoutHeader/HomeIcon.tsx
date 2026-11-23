@@ -1,3 +1,4 @@
+// Modified by Boggo Oy for GoBase: the header shows the Boggo logo.
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { cn, Tooltip, TooltipContent, TooltipTrigger } from 'ui'
@@ -38,9 +39,9 @@ export const HomeIcon = ({ className }: { className?: string }) => {
           tabIndex={0}
         >
           <img
-            alt="Supabase"
-            src={`${router.basePath}/img/supabase-logo.svg`}
-            className={largeLogo ? 'h-[20px]' : 'h-[18px]'}
+            alt="Boggo"
+            src={`${router.basePath}/img/gobase/boggo-logo.svg`}
+            className={cn('dark:invert', largeLogo ? 'h-[20px]' : 'h-[18px]')}
           />
           <span className="sr-only">Back to organization home</span>
         </Link>
