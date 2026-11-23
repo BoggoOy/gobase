@@ -181,10 +181,10 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
     process.env.NODE_ENV === 'development' ||
     process.env.NEXT_PUBLIC_ENVIRONMENT === 'local' ||
     isCLI
-  // Modified by Boggo Oy for GoBase: GoBase favicons (staging/local variants are unchanged).
+  // Modified by Boggo Oy for GoBase: the GoBase favicon is used in every environment.
   let faviconRoute = '/img/gobase/favicon'
-  if (isNonProdEnv) faviconRoute = '/favicon/staging'
-  if (isLocalEnv) faviconRoute = '/favicon/local'
+  if (isNonProdEnv) faviconRoute = '/img/gobase/favicon'
+  if (isLocalEnv) faviconRoute = '/img/gobase/favicon'
 
   const checkCliEnvironment = async () => {
     const data = await getCLIReleaseVersion()
