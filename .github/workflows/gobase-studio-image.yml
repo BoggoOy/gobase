@@ -1,0 +1,80 @@
+# Copyright Boggo Oy. Licensed under the Apache License 2.0.
+#
+# Builds the GoBase Studio image from the `gobase` branch and pushes it to the GitHub Container
+# Registry. Deployments pin the image by digest (shown in the run summary), not by tag.
+name: GoBase Studio image
+
+on:
+  push:
+    branches: [gobase]
+    paths:
+      - 'apps/studio/**'
+      - 'packages/**'
+      - 'patches/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - 'pnpm-workspace.yaml'
+      - '.github/workflows/gobase-studio-image.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  IMAGE: ghcr.io/boggooy/gobase-studio
+
+jobs:
+  build:
+    name: Build and push
+    if: github.repository == 'BoggoOy/gobase'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          persist-credentials: false
+
+      - uses: docker/setup-buildx-action@885d1462b80bc1c1c7f0b00334ad271f09369c55 # v2.10.0
+
+      # GITHUB_TOKEN is the only credential used; it is scoped to this job and the registry.
+      - uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4.4.0
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - id: build
+        uses: docker/build-push-action@1104d471370f9806843c095c1db02b5a90c5f8b6 # v3.3.1
+        with:
+          push: true
+          context: .
+          file: apps/studio/Dockerfile
+          target: production
+          platforms: linux/amd64
+          tags: ${{ env.IMAGE }}:sha-${{ github.sha }}
+          labels: |
+            org.opencontainers.image.title=gobase-studio
+            org.opencontainers.image.description=GoBase Studio (Supabase-compatible), based on Supabase Studio
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.licenses=Apache-2.0
+          cache-from: type=registry,ref=${{ env.IMAGE }}:buildcache
+          cache-to: type=registry,ref=${{ env.IMAGE }}:buildcache,mode=max
+
+      - name: Summary
+        env:
+          DIGEST: ${{ steps.build.outputs.digest }}
+          SHA: ${{ github.sha }}
+        run: |
+          {
+            echo "### GoBase Studio image"
+            echo ""
+            echo "- Tag: \`${IMAGE}:sha-${SHA}\`"
+            echo "- Pin for deployment: \`${IMAGE}@${DIGEST}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
